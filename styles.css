@@ -12,3 +12,22 @@ body {
     height: 100px;
     width: 100%;
 }
+
+.radio_btns {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(233, 228, 221);
+    box-shadow: 15px;
+}
+
+.start {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(233, 228, 221);
+    box-shadow: 15px;
+    border-radius: 10px;
+}
