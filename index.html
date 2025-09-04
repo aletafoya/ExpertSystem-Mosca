@@ -1,26 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expert System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="nav_bar">
-        <div class="radio_btns">
-            <section class="rbtn">
-                <input type="radio" id="rbtn1" name="rbtn" checked>
-                <label for="rbtn1">Forward Chaining</label>
-                <input type="radio" id="rbtn2" name="rbtn">
-                <label for="rbtn2">Backward Chaining</label>
-            </section>
-        </div>
 
-        <button class="start" id="start">Start</button>
-        
+<body>
+    <div class="content">
+
+        <header>
+            <ul>
+                <li>
+                    <select name="select">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" selected>Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="select">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" selected>Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="select">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" selected>Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="select">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" selected>Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <section class="section-options">
+                <div class="rbtn">
+                    <div>
+                        <input type="radio" id="rbtn1" name="rbtn" checked>
+                        <label for="rbtn1">Forward Chaining</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="rbtn2" name="rbtn">
+                        <label for="rbtn2">Backward Chaining</label>
+                    </div>
+                </div>
+                <div class="goal">
+                    <label for="goal">Goal</label>
+                    <select name="goal">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" selected>Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+                </div>
+                <div class="result">
+                    <label for="result">Result</label>
+                    <input readonly type="text" name="result" id="">
+                </div>
+            </section>
+            <section class="section-rules">
+                <textarea readonly name="" id="" cols="20" rows="18"></textarea>
+            </section>
+        </main>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,33 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+* {
     padding: 0;
-    overflow: hidden;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
     display: flex;
     justify-content: center;
-}
-
-.nav_bar {
-    background-color: #333;
-    height: 100px;
-    width: 100%;
-}
-
-.radio_btns {
-    padding: 20px;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
-    background-color: rgb(233, 228, 221);
-    box-shadow: 15px;
 }
 
-.start {
-    padding: 20px;
-    justify-content: center;
+.content {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    background-color: rgb(233, 228, 221);
-    box-shadow: 15px;
+    background: #cac1c1;
+    height: 80%;
     border-radius: 10px;
+}
+
+header {
+    padding: 10px 0 10px 0;
+}
+
+header ul {
+    display: flex;
+    
+}
+
+header ul li {
+    margin: 0 10px 0 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.section-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #ada5a5;
+    gap: 50px;
+    padding: 20px;
+}
+
+.rbtn {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-rules {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 80%;
+    resize: none;
+    border-radius: 10px;
+}
+
+.goal {
+    display: flex;
+    flex-direction: column;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    padding: 0 5px 0 5px;
+    background: #73bbff;
+    border-radius: 5px;
+    border: #5484b1 solid 1px;
 }
