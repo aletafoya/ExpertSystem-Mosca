@@ -1,76 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert System</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expert System</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <div class="content">
-        <header>
-            <ul>
-                <li>
-                    <select name="select" onchange="startReasoning()">
-                        <option value="value1" selected >File</option>
-                        <option value="start">Start</option>
-                        <option value="restart">Restart</option>
-                        <option value="exit">Exit</option>
-                    </select>
-                </li>
-                <li>
-                    <select name="select">
-                        <option value="value1" selected>RuleBase</option>
-                        <option value="value2">See</option>
-                    </select>
-                </li>
-                <li>
-                    <select name="select">
-                        <option value="value1" selected>Data</option>
-                        <option value="load">Load</option>
-                    </select>
-                </li>
-                <li>
-                    <select name="select">
-                        <option value="value1" selected>Help</option>
-                        <option value="value2">See</option>
-                    </select>
-                </li>
-            </ul>
-        </header>
-        <main>
-            <section class="section-options">
-                <div class="rbtn">
-                    <div>
-                        <input type="radio" id="rbtn1" name="rbtn" checked>
-                        <label for="rbtn1">Forward Chaining</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="rbtn2" name="rbtn">
-                        <label for="rbtn2">Backward Chaining</label>
-                    </div>
-                </div>
-                <div class="goal">
-                    <label for="goal">Goal</label>
-                    <select name="goal">
-                        <option value="vehicle" selected>Vehicle</option>
-                        <option value="cycle">Cycle</option>
-                    </select>
-                </div>
-                <div class="result">
-                    <label for="result">Result</label>
-                    <input readonly type="text" name="result" id="">
-                </div>
-            </section>
-            <section class="section-rules">
-                <textarea readonly name="" id="" cols="20" rows="18"></textarea>
-            </section>
-        </main>
-    </div>
+  <div class="content">
+    <header>
+      <ul class="menu">
+        <li>
+          <select id="fileMenu" onchange="handleFileMenu(this.value)">
+            <option value="file" selected>File</option>
+            <option value="start">Start</option>
+            <option value="restart">Restart</option>
+            <option value="exit">Exit</option>
+          </select>
+        </li>
 
-    <script src="script.js"></script>
+        <!-- RuleBase: ahora contiene las 2 KB (vehicles & dogs) -->
+        <li>
+          <select id="rulebaseMenu" onchange="handleRulebaseMenu(this.value)">
+            <option value="none" selected>RuleBase</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="dogs">Dogs</option>
+          </select>
+        </li>
+
+        <li>
+          <select id="dataMenu" onchange="handleDataMenu(this.value)">
+            <option value="data" selected>Data</option>
+            <option value="load">Load</option>
+          </select>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="section-options">
+        <div class="rbtn">
+          <div>
+            <input type="radio" id="rc1" name="mode" value="forward" checked>
+            <label for="rc1">Forward Chaining</label>
+          </div>
+          <div>
+            <input type="radio" id="rc2" name="mode" value="backward">
+            <label for="rc2">Backward Chaining</label>
+          </div>
+        </div>
+
+        <div class="goal">
+          <label for="goal">Goal</label>
+          <select id="goal">
+            <option value="">-- Seleccione RuleBase primero --</option>
+          </select>
+        </div>
+
+        <div class="result">
+          <label for="resultField">Result</label>
+          <input readonly type="text" id="resultField" value="" />
+        </div>
+      </section>
+
+      <section class="section-rules">
+        <textarea id="traceArea" readonly cols="30" rows="20"></textarea>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal for asking attributes -->
+  <div id="modalBackdrop" class="modal-backdrop hidden">
+    <div class="modal">
+      <h3 id="modalTitle">Pregunta</h3>
+      <div id="modalBody"></div>
+      <div class="modal-actions">
+        <button id="modalSkipBtn">Skip (nulo)</button>
+        <button id="modalCancelBtn">Cancel</button>
+        <button id="modalOkBtn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
