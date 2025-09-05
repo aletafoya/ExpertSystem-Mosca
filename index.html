@@ -10,35 +10,32 @@
 
 <body>
     <div class="content">
-
         <header>
             <ul>
                 <li>
-                    <select name="select">
-                        <option value="value1">Value 1</option>
-                        <option value="value2" selected>Value 2</option>
-                        <option value="value3">Value 3</option>
+                    <select name="select" onchange="startReasoning()">
+                        <option value="value1" selected >File</option>
+                        <option value="start">Start</option>
+                        <option value="restart">Restart</option>
+                        <option value="exit">Exit</option>
                     </select>
                 </li>
                 <li>
                     <select name="select">
-                        <option value="value1">Value 1</option>
-                        <option value="value2" selected>Value 2</option>
-                        <option value="value3">Value 3</option>
+                        <option value="value1" selected>RuleBase</option>
+                        <option value="value2">See</option>
                     </select>
                 </li>
                 <li>
                     <select name="select">
-                        <option value="value1">Value 1</option>
-                        <option value="value2" selected>Value 2</option>
-                        <option value="value3">Value 3</option>
+                        <option value="value1" selected>Data</option>
+                        <option value="load">Load</option>
                     </select>
                 </li>
                 <li>
                     <select name="select">
-                        <option value="value1">Value 1</option>
-                        <option value="value2" selected>Value 2</option>
-                        <option value="value3">Value 3</option>
+                        <option value="value1" selected>Help</option>
+                        <option value="value2">See</option>
                     </select>
                 </li>
             </ul>
@@ -58,9 +55,8 @@
                 <div class="goal">
                     <label for="goal">Goal</label>
                     <select name="goal">
-                        <option value="value1">Value 1</option>
-                        <option value="value2" selected>Value 2</option>
-                        <option value="value3">Value 3</option>
+                        <option value="vehicle" selected>Vehicle</option>
+                        <option value="cycle">Cycle</option>
                     </select>
                 </div>
                 <div class="result">
